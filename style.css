@@ -1,0 +1,602 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+
+.first-logo{
+    position:fixed;
+    top:50px;
+    left: 35px;
+    filter: opacity(.3) brightness(90) blur(1px);
+}
+.first-menu ul{
+    position: fixed;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    width: 500PX;
+    top:70px;
+    right: 50px;
+    display: flex;
+    list-style: none;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    opacity: 1; /* Default opacity */
+    transition: opacity 0.3s ease;
+}
+.first-menu ul li a{
+    line-height: 24px;
+    text-decoration: none;
+    color: white;
+    padding: 1.2rem;
+}
+.first-menu ul li a:hover{
+    color: #111;
+    background-color: #c6af2e;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    
+}
+.first-text{
+    position: absolute;
+    top:300px;
+    left: 400px;
+    color: white;
+}
+.first-text .one{
+    color: gray;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 60px;
+}
+.first-text .tow{
+    color: gray;
+    font-size: 35px;
+    font-weight: 700;
+    padding-left: 120px;
+    line-height: 60px;
+}
+.first-text .three{
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+    padding-left: 255px;
+    line-height: 40px;
+}
+.first-button{
+    position: absolute;
+    display: flex;
+    gap: 100PX;
+    top: 500px;
+    left: 470px;
+}
+.button-onebox a{
+    text-decoration: none;
+    color: #111;
+    font-style: 40px;
+}
+.button-secondbox a{
+    text-decoration: none;
+    color: #111;
+}
+
+                        /* saprate-line*/
+.saprate-line{
+    height: 3px;
+    background-color: gray;
+    width: 100%;
+}
+                    /* second-page */
+.second-page{
+    color: wheat;
+    padding: 70px;
+    width: auto;
+    background: radial-gradient(circle, rgba(173,161,67,1) 0%, rgba(0,0,0,1) 92%);
+}
+.second-menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-menu .icon i{
+    color: white;
+    font-size: 20px;
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.second-search input{
+    background: transparent;
+    outline: transparent;
+    border: none;
+    color: rgb(189, 178, 178);
+    font-size: 30px;
+    width: 600px;
+}
+.second-search .fa-magnifying-glass{
+    color: rgb(189, 178, 178);
+    font-size: 28px;
+}
+.second-search{
+    border: 1px solid rgb(167, 163, 163);   
+    border-radius: 1.5rem;
+    padding: 5px 20px;
+}
+.second-search input:hover ,.second-search:hover{
+    cursor: pointer;
+}
+.fa-magnifying-glass:hover{
+    color: yellow;
+} 
+.icon i:hover{
+    background-color: #c6af2e;
+}
+.second-login input{
+    background: transparent;
+    color: white;
+    padding: 8px 15px;
+    font-size: 1.3rem;
+    margin-right: 3rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+}
+.second-login input:active{
+  background-color: #c6af2e;
+}
+.second-items{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 3rem;
+}
+.second-items .other-info p{
+    font-size: 65px;
+    line-height: 100px;
+    font-weight: 900;
+    color: gray;
+    opacity: 0.7;
+    width: 400px;
+}
+.second-items .product{
+    width: 350px;
+}
+.second-items .product img{
+    height: 250px;
+    margin-left: 100px;
+    box-shadow: 15px 20px 20px rgba(0, 0, 0, 0.3);
+}
+.product img {
+    transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
+}
+
+.product img.fade-out {
+    opacity: 0;
+    transform: scale(0.9) rotateY(180deg);
+    filter: blur(5px);
+}
+
+.product img.fade-in {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+    filter: blur(0);
+}
+.other-info, .product-info h3, .product-info p {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.other-info.fade-out, .product-info h3.fade-out, .product-info p.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.other-info.fade-in, .product-info h3.fade-in, .product-info p.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+.bg-logo{
+    position: relative;
+    top: 60px;
+    right: 500px;
+    filter: contrast(0) brightness(0) opacity(0.4) blur(4px);
+
+}
+.second-items .product ,.product-info{
+    margin-top: 10rem;
+    z-index: 2;
+}
+.second-items .product-info {
+    color: white;
+    position: relative;
+    right: 450px;
+    width: 200px;
+    height: 310px;
+    padding: 0px 50px 0px 0px;
+    
+}
+.second-items .product-info h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.second-items .product-info p{
+    margin-top: 1rem;
+    font-weight: 100;
+    /* line-height: 25px; */
+    font-size: .9rem;
+    margin-bottom: 2rem;
+}
+.second-items .product-button{
+    display: flex;
+    gap: 30px;
+}
+.second-items .product-button input{
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.second-items .product-button input:active{
+    border: none;
+    background-color: #c6af2e;
+    color: white;
+}
+.second-items .product-button .buy-now{
+    color: black;
+    font-weight: 700;
+    background-color: rgb(157, 106, 206);
+}
+
+.second-moreproduct{
+    display: flex;
+    justify-content: space-between;
+    margin-top:2rem ;
+    margin-left: 8rem;
+}
+.moreProduct{
+    height: 110px;
+    width: 250px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid gray;
+    border-radius: 1rem;
+    background-color: rgba(170, 169, 169, 0.2);
+    padding: 10px 20px;
+}
+.moreProduct-dtail p{
+    line-height: 30px;
+}
+.moreProduct {
+    position: relative; /* Make the container relative */
+}
+
+.main-product {
+    position: relative; /* Keep the main product in normal flow */
+    z-index: 2; /* Ensure it is above the background */
+}
+.bg-product {
+    position: absolute; /* Position it absolutely */
+    top: 30px; /* Align it to the top */
+    left: 20px; /* Align it to the left */
+    width: 80px; /* Make it cover the entire area */
+    height: 80px; /* Make it cover the entire area */
+    filter: blur(10px); /* Apply blur effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Apply shadow effect */
+    z-index: 1; /* Ensure it is below the main product */
+}
+.moreProduct .fa-plus {
+    color: black;
+    margin-top: 4rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease; /* Transition for background and shadow */
+    position: relative; /* Position relative for the shadow effect */
+    perspective: 1000px; /* Enable 3D perspective */
+}
+
+.moreProduct .fa-plus:hover { 
+     background-color: rgba(200, 200, 200, 0.3); /*Change background color on hover */
+     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);/* Add shadow effect */
+     animation: pulse 1s infinite, rotate 0.6s forwards;/* Add pulse and rotate animations */
+ }
+
+/* Keyframes for pulse effect */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1.1); /* Slightly scale up */
+    }
+    50% {
+        transform: scale(1.15); /* Scale up more for the pulse */
+    }
+}
+
+/* Keyframes for rotate effect */
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg); /* Start with no rotation */
+    }
+    100% {
+        transform: rotateY(360deg); /* Complete a full rotation */
+    }
+}
+/* Active state animation */
+.moreProduct .fa-plus:active {
+    transform: scale(0.85) rotate(5deg); /* Scale down and slightly rotate */
+    background-color: rgba(100, 100, 100, 0.7); /* Darker background color when pressed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Reduce shadow effect for a pressed look */
+    transition: transform 0.1s ease, background-color 0.1s ease, box-shadow 0.1s ease; /* Quick transition for active state */
+    animation: none; /* Disable hover animations while active */
+}
+
+/* Optional: Add a subtle shake effect after pressing */
+.moreProduct .fa-plus:active:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: shake 0.3s ease forwards; /* Add shake animation */
+}
+
+/* Keyframes for shake effect */
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.disply-info {
+    display: none;
+}
+
+/* Button Animations */
+button, a {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover, a:hover {
+    background-color:transparent;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #c6af2e;
+}
+@keyframes scaleRotateEffect {
+    0% {
+        transform: scale(1.1) rotate(-5deg);
+        box-shadow: 0 0 10px #111;
+    }
+    50% {
+        transform: scale(1.2) rotate(5deg);
+        box-shadow: 0 0 15px #d3c366;
+    }
+    100% {
+        transform: scale(1.1) rotate(-5deg);
+        box-shadow: 0 0 10px #d3c366;
+    }
+}
+
+/* Image Animations */
+/* img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+img:active {
+    transform: scale(0.95);
+    filter: brightness(0.8);
+} */
+
+                    /* 3-page */
+.third-page{
+    height: 800px;
+    color: white;
+    padding: 5rem 4rem;
+    background-color: black;
+}
+.third-menu{
+    display: flex;
+    justify-content: space-between;
+}
+.third-menu .third-user input{
+    background: transparent;
+    color: white;
+    padding: 8px 15px;
+    font-size: 1.3rem;
+    margin-right: 3rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+}
+.third-menu .third-user input:active{
+    background-color: #c6af2e;
+}
+.third-menu .third-user i{
+    color: white;
+    font-size: 20px;
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.third-menu .third-user i:hover{
+    background-color: #c6af2e;
+}
+.third-mainContaner{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem; 
+}
+.third-mainContaner .third-Container{
+    padding: 2rem 1rem;
+    background-color: #1111119f;
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 1.5rem;
+}
+.third-mainContaner .third-img img{
+    height: 210px;
+    width: 300px;
+    border-radius: 1.5rem;
+}
+.third-mainContaner .third-info{
+    display: flex;
+    gap: 3rem;
+    padding: 0 2rem;
+    height: 120px;
+}
+.third-mainContaner .third-info p{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+}
+.third-mainContaner input {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 2rem;
+    color: white;
+    border: 1px solid #c6af2e;
+    background: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, filter 0.3s ease;
+}
+
+.third-mainContaner input:hover {
+    background-color: #c6af2e;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #c6af2e;
+    color: #fff;
+}
+
+@keyframes scaleRotateEffect {
+    0% {
+        transform: scale(1.1) rotate(-5deg);
+        box-shadow: 0 0 10px #111;
+    }
+    50% {
+        transform: scale(1.2) rotate(5deg);
+        box-shadow: 0 0 15px #d3c366;
+    }
+    100% {
+        transform: scale(1.1) rotate(-5deg);
+        box-shadow: 0 0 10px #d3c366;
+    }
+}
+.third-offer {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+    font-weight: 900;
+    font-size: 25px;
+    color: #3C5050;
+}
+
+.third-offer .third-btn input {
+    margin: 1.5rem 7rem;
+    padding: 1rem 2.3rem;
+    align-items: center;
+    border-radius: 2rem;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    border: 1px solid #5A96C8;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, filter 0.3s ease;
+}
+
+.third-offer .third-btn input:hover {
+    background-color: #5A96C8;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #5A96C8;
+    color: #fff;
+}
+
+.third-offer .third-btn input:active {
+    background-color: #3C5050;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 10px #3C5050;
+    color: #fff;
+    filter: blur(2px);
+    animation: activeEffectBtn 0.5s ease forwards;
+}
+
+@keyframes activeEffectBtn {
+    0% {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 0 10px #3C5050;
+        filter: blur(2px);
+    }
+    50% {
+        transform: scale(1.15) rotate(-5deg);
+        box-shadow: 0 0 15px #3C5050;
+        filter: blur(4px);
+    }
+    100% {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 0 10px #3C5050;
+        filter: blur(2px);
+    }
+}
+
+.third-offer .third-btn .pricing {
+    background-color: #5A96C8;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, filter 0.3s ease;
+}
+
+.third-offer .third-btn .pricing:hover {
+    background-color: #3C5050;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #3C5050;
+    color: #fff;
+}
+
+.third-offer .third-btn .pricing:active {
+    background-color: #5A96C8;
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 0 10px #5A96C8;
+    color: #fff;
+    filter: blur(2px);
+    animation: activeEffectPricing 0.5s ease forwards;
+}
+
+@keyframes activeEffectPricing {
+    0% {
+        transform: scale(1.1) rotate(-5deg);
+        box-shadow: 0 0 10px #5A96C8;
+        filter: blur(2px);
+    }
+    50% {
+        transform: scale(1.15) rotate(5deg);
+        box-shadow: 0 0 15px #5A96C8;
+        filter: blur(4px);
+    }
+    100% {
+        transform: scale(1.1) rotate(-5deg);
+        box-shadow: 0 0 10px #5A96C8;
+        filter: blur(2px);
+    }
+}
+
+
+
+
